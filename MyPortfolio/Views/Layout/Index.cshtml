@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!-- LayoutController a bağlı olan view yapısı ve Ready-Bootstrap-Dashboard-master -> typography.html içinden kopyalanıp alınan html iskeleti -->
+
+<!DOCTYPE html>
+<html>
+<!-- Head kısmı -->
+@await Component.InvokeAsync("_LayoutHeadComponentPartial")
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar(class="main-header") kısmı -->
+        @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
+
+        <!-- Sidebar kısmı -->
+        @await Component.InvokeAsync("_LayoutSidebarComponentPartial")
+
+        <div class="main-panel">
+
+            <!-- RenderBody() metodu: Bu sayfaya bağlı olarak gelecek olan sayfalar sayfamın bu kısmında yer alır anlamına gelir -->
+            @RenderBody()
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://www.themekita.com">
+                                    ThemeKita
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Help
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://themewagon.com/license/#free-item">
+                                    Licenses
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright ml-auto">
+                        @DateTime.Now.Year, made with <i class="la la-heart heart text-danger"></i> by <a href="http://www.themekita.com">ThemeKita</a>
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+<!-- JS kodları kısmı -->
+@await Component.InvokeAsync("_LayoutScriptComponentPartial")
+
+</html>
