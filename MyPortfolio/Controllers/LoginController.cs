@@ -21,12 +21,39 @@ namespace MyPortfolio.Controllers
 
             if (user != null)
             {
-                var value = _context.Admins.Where(x => x.Password == "true");
-                return RedirectToAction("ExperienceList", "Experience");       // Normalde /Index/Layout/ olmalı fakat index te Renderbody olduğu için sayfa çalışmıyor. Onun yerine yolu Experince tanımladık. Bunu daha sonra Dashboard olarak tanımlayacağız. 
+                // Giriş başarılı
+                return RedirectToAction("Index", "Dashboard");
             }
 
-            ViewBag.Error = "Kullanıcı adı veya şifre hatalı.";
+            ViewBag.Error = "Kullanıcı adı veya şifre yanlış!";
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult ChangePassword(string oldPassword, string newPassword, string confirmPassword)
+        {
+            // Giriş yapmış kullanıcı örneğiyle çalışıldığını varsayalım (örnek kullanıcı Id: 1)
+            var user = _context.Admins.FirstOrDefault(x => x.Id == 1);
+
+            if (user != null && user.Password == oldPassword)
+            {
+                if (newPassword == confirmPassword)
+                {
+                    user.Password = newPassword;
+                    _context.SaveChanges();
+                    ViewBag.Message = "Şifre başarıyla güncellendi.";
+                }
+                else
+                {
+                    ViewBag.Error = "Yeni şifreler uyuşmuyor.";
+                }
+            }
+            else
+            {
+                ViewBag.Error = "Eski şifre yanlış.";
+            }
+
+            return RedirectToAction("Index");
         }
 
     }

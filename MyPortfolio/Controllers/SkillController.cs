@@ -57,5 +57,6 @@ namespace MyPortfolio.Controllers
             context.SaveChanges();
             return RedirectToAction("SkillList");
         }
+
     }
 }

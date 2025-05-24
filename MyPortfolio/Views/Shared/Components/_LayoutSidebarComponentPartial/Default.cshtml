@@ -16,81 +16,80 @@
 			</div>
 		</div>
 		<ul class="nav">
-			<li class="nav-item">
-				<a href="/Dashboard/Index/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Dashboard" ? "active" : "")">
+				<a asp-controller="Dashboard" asp-action="Index">
 					<i class="la la-dashboard"></i>
 					<p>Dashboard</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Default/Index/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Default" ? "active" : "")">
+				<a asp-controller="Default" asp-action="Index">
 					<i class="la la-home"></i>
 					<p>Siteye Git</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/About/AboutList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "About" ? "active" : "")">
+				<a asp-controller="About" asp-action="AboutList">
 					<i class="la la-user"></i>
 					<p>Hakkımda</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/ToDoList/Index/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "ToDoList" ? "active" : "")">
+				<a asp-controller="ToDoList" asp-action="Index">
 					<i class="la la-list-alt"></i>
 					<p>Yapılacaklar</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<!-- Buradaki a içinde sidebar ın Deneyimler butonuna geçiş yolu verdim -->
-				<a href="/Experience/ExperienceList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Experience" ? "active" : "")">
+				<a asp-controller="Experience" asp-action="ExperienceList">
 					<i class="la la-keyboard-o"></i>
 					<p>Deneyimler</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Feature/FeatureList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Feature" ? "active" : "")">
+				<a asp-controller="Feature" asp-action="FeatureList">
 					<i class="la la-comment"></i>
 					<p>Öne Çıkan Alan</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Contact/ContactList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Contact" ? "active" : "")">
+				<a asp-controller="Contact" asp-action="ContactList">
 					<i class="la la-envelope-o"></i>
 					<p>İletişim Bilgileri</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Portfolio/PortfolioList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Portfolio" ? "active" : "")">
+				<a asp-controller="Portfolio" asp-action="PortfolioList">
 					<i class="la la-cubes"></i>
 					<p>Portfolyo</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Skill/SkillList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Skill" ? "active" : "")">
+				<a asp-controller="Skill" asp-action="SkillList">
 					<i class="la la-certificate"></i>
 					<p>Yeteneklerim</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Testimonial/TestimonialList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Testimonial" ? "active" : "")">
+				<a asp-controller="Testimonial" asp-action="TestimonialList">
 					<i class="la la-stack-exchange"></i>
 					<p>Referanslarım</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Social/SocialList/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Social" ? "active" : "")">
+				<a asp-controller="Social" asp-action="SocialList">
 					<i class="la la-chain"></i>
 					<p>Sosyal Medya</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Message/Inbox/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Message" ? "active" : "")">
+				<a asp-controller="Message" asp-action="Inbox">
 					<i class="la la-bell"></i>
 					<p>Gelen Kutusu</p>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a href="/Statistic/Index/">
+			<li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Statistic" ? "active" : "")">
+				<a asp-controller="Statistic" asp-action="Index">
 					<i class="la la-bar-chart"></i>
 					<p>İstatistikler</p>
 				</a>
