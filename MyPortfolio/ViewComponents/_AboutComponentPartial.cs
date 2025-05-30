@@ -12,6 +12,8 @@ namespace MyPortfolio.ViewComponents
             ViewBag.aboutSubDescription = portfolioContext.Abouts.Select(x => x.SubDescription).FirstOrDefault();       // About un SubDescription ı için ViewBag
             ViewBag.aboutDetail = portfolioContext.Abouts.Select(x => x.Details).FirstOrDefault();     // About un Detail ı için ViewBag
             return View();
+
+            // ViewBag : Controller dan view a veri taşır.
         }
     }
 }

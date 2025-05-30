@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3ACFCB2-8F7D-4F73-B9D5-5114DCBE3BAB}|MyPortfolio\\MyPortfolio.csproj|c:\\users\\alper\\desktop\\udemy_asp.net_core_portfolyo\\myportfolio\\myportfolio\\views\\about\\aboutlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3ACFCB2-8F7D-4F73-B9D5-5114DCBE3BAB}|MyPortfolio\\MyPortfolio.csproj|solutionrelative:myportfolio\\views\\about\\aboutlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3ACFCB2-8F7D-4F73-B9D5-5114DCBE3BAB}|MyPortfolio\\MyPortfolio.csproj|c:\\users\\alper\\desktop\\udemy_asp.net_core_portfolyo\\myportfolio\\myportfolio\\views\\shared\\components\\_layoutsidebarcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3ACFCB2-8F7D-4F73-B9D5-5114DCBE3BAB}|MyPortfolio\\MyPortfolio.csproj|solutionrelative:myportfolio\\views\\shared\\components\\_layoutsidebarcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B3ACFCB2-8F7D-4F73-B9D5-5114DCBE3BAB}|MyPortfolio\\MyPortfolio.csproj|c:\\users\\alper\\desktop\\udemy_asp.net_core_portfolyo\\myportfolio\\myportfolio\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3ACFCB2-8F7D-4F73-B9D5-5114DCBE3BAB}|MyPortfolio\\MyPortfolio.csproj|solutionrelative:myportfolio\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AboutList.cshtml",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\MyPortfolio\\Views\\About\\AboutList.cshtml",
-              "RelativeDocumentMoniker": "MyPortfolio\\Views\\About\\AboutList.cshtml",
-              "ToolTip": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\MyPortfolio\\Views\\About\\AboutList.cshtml",
-              "RelativeToolTip": "MyPortfolio\\Views\\About\\AboutList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\MyPortfolio\\Views\\Default\\Index.cshtml",
+              "RelativeDocumentMoniker": "MyPortfolio\\Views\\Default\\Index.cshtml",
+              "ToolTip": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\MyPortfolio\\Views\\Default\\Index.cshtml",
+              "RelativeToolTip": "MyPortfolio\\Views\\Default\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T13:27:13.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\MyPortfolio\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "MyPortfolio\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\alper\\Desktop\\Udemy_Asp.Net_Core_Portfolyo\\MyPortfolio\\MyPortfolio\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "MyPortfolio\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T13:24:13.383Z",
+              "WhenOpened": "2025-05-26T22:18:52.273Z",
               "EditorCaption": ""
             }
           ]
