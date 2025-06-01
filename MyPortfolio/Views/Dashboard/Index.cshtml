@@ -3,182 +3,158 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Layout/Index.cshtml";
+    var todoList = ViewBag.TodoList as List<MyPortfolio.DAL.Entities.ToDoList>;
 }
 
-<div class="content">
-    <div class="container-fluid">
-        <h4 class="page-title">Dashboard</h4>
-        <!-- Statistic start -->
-        <div class="card">
-            <div class="card-header">
-                <div class="card-body">
-                    @await Component.InvokeAsync("_DashboardStatisticComponentPartial")
-                </div>
-            </div>
-        </div>
-        <!-- Statistic end -->
-
-        <div class="row">
-            <!-- Skill Ortalama start -->
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Task</h4>
-                        <p class="card-category">Complete</p>
-                    </div>
+<body>
+    <div class="content">
+        <div class="container-fluid">
+            <h4 class="page-title">Dashboard</h4>
+            <!-- Statistic start -->
+            <div class="card">
+                <div class="card-header">
                     <div class="card-body">
-                        <div id="task-complete" class="chart-circle mt-4 mb-3"></div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="legend"><i class="la la-circle text-primary"></i> Completed</div>
+                        @await Component.InvokeAsync("_DashboardStatisticComponentPartial")
                     </div>
                 </div>
             </div>
-            <!-- Skill Ortalama end -->
-            <!-- Worl Map start -->
-            <div class="col-md-9">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Dünya Haritası</h4>
+            <!-- Statistic end -->
+            <div class="row">
+                <!-- Skill Ortalama start -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Yetenekler</h4>
+                            <p class="card-category">Ortalama Değer</p>
+                        </div>
+                        <div class="card-body text-center">
+                            <svg id="circleProgress" width="120" height="120">
+                                <circle cx="60" cy="60" r="50" stroke="#eee" stroke-width="10" fill="none" />
+                                <circle id="progressCircle" cx="60" cy="60" r="50" stroke="#007bff" stroke-width="10" fill="none"
+                                        stroke-linecap="round" transform="rotate(-90 60 60)" />
+                                <text id="progressText" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                                      font-size="20" fill="#333">@ViewBag.TaskProgress%</text>
+                            </svg>
+                        </div>
+                        <div class="card-footer">
+                            <div class="legend"><i class="la la-circle text-primary"></i> Yeteneklerin Ortalaması </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="mapcontainer">
-                            <div class="map">
-                                <span>Alternative content for the map</span>
+                </div>
+                <!-- Skill Ortalama end -->
+                <!-- Worl Map start -->
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Dünya Haritası</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="mapcontainer">
+                                <div class="map">
+                                    <span>Alternative content for the map</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Worl Map end -->
+            </div>
+            <!-- Todolist start -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-tasks">
+                        <div class="card-header ">
+                            <h4 class="card-title">Yapılacaklar</h4>
+                            <p class="card-category">To Do List</p>
+                        </div>
+                        <div class="card-body ">
+                            <div class="table-full-width">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input  select-all-checkbox" type="checkbox" data-select="checkbox" data-target=".task-select">
+                                                        <span class="form-check-sign"></span>
+                                                    </label>
+                                                </div>
+                                            </th>
+                                            <th>Yapılacaklar</th>
+                                            <th>Durum</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in todoList)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input task-select" type="checkbox" @(item.Status ? "checked" : "")>
+                                                            <span class="form-check-sign"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>@item.Title</td>
+                                                <td class="td-actions text-right">
+                                                    <div class="form-button-action">
+                                                        <button type="button" data-toggle="tooltip" title="Düzenle" class="btn btn-link btn-simple-primary">
+                                                            <a href="/ToDoList/UpdateToDoList/@item.ToDoListId"><i class="la la-edit"></i></a>
+                                                        </button>
+                                                        <button type="button" data-toggle="tooltip" title="Sil" class="btn btn-link btn-simple-danger">
+                                                            <a href="/ToDoList/DeleteToDoList/@item.ToDoListId"><i class="la la-times"></i></a>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Worl Map end -->
+            <!-- Todolist end -->
         </div>
-        <!-- Todolist start -->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card card-tasks">
-                    <div class="card-header ">
-                        <h4 class="card-title">Tasks</h4>
-                        <p class="card-category">To Do List</p>
-                    </div>
-                    <div class="card-body ">
-                        <div class="table-full-width">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input  select-all-checkbox" type="checkbox" data-select="checkbox" data-target=".task-select">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </th>
-                                        <th>Task</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input task-select" type="checkbox">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Planning new project structure</td>
-                                        <td class="td-actions text-right">
-                                            <div class="form-button-action">
-                                                <button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
-                                                    <i class="la la-edit"></i>
-                                                </button>
-                                                <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
-                                                    <i class="la la-times"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input task-select" type="checkbox">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Update Fonts</td>
-                                        <td class="td-actions text-right">
-                                            <div class="form-button-action">
-                                                <button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
-                                                    <i class="la la-edit"></i>
-                                                </button>
-                                                <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
-                                                    <i class="la la-times"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input task-select" type="checkbox">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            Add new Post
-                                        </td>
-                                        <td class="td-actions text-right">
-                                            <div class="form-button-action">
-                                                <button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
-                                                    <i class="la la-edit"></i>
-                                                </button>
-                                                <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
-                                                    <i class="la la-times"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input class="form-check-input task-select" type="checkbox">
-                                                    <span class="form-check-sign"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Finalise the design proposal</td>
-                                        <td class="td-actions text-right">
-                                            <div class="form-button-action">
-                                                <button type="button" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
-                                                    <i class="la la-edit"></i>
-                                                </button>
-                                                <button type="button" data-toggle="tooltip" title="Remove" class="btn btn-link btn-simple-danger">
-                                                    <i class="la la-times"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card-footer ">
-                        <div class="stats">
-                            <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Todolist end -->
     </div>
-</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressValue = Math.round(@ViewBag.skill3); // C# dan gelen değer
+            const circle = document.getElementById("progressCircle");
+            const radius = circle.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = circumference;
+            circle.style.transition = 'stroke-dashoffset 1.5s ease-out';
+
+            // Yüzde animasyonu için
+            let current = 0;
+            const textEl = document.getElementById("progressText");
+
+            // Daire animasyonu
+            const offset = circumference - (progressValue / 100 * circumference);
+            setTimeout(() => {
+                circle.style.strokeDashoffset = offset;
+            }, 100); // çok kısa bir gecikme animasyonu tetikler
+
+            // Sayı animasyonu
+            const interval = setInterval(() => {
+                if (current < progressValue) {
+                    current++;
+                    textEl.textContent = `${current}%`;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 15); // animasyon hızını ayarlayabilirsin
+        });
+
+    </script>
+
+</body>
 
 
 
