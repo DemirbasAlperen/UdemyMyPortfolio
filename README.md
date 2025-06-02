@@ -17,7 +17,11 @@ Merhabalar. Bu repomda Murat Yücedağ'ın Udemy üzerinden vermiş olduğu Asp.
 * Bootstrap
 * JavaScript
 
+# Proje Görselleri
 
+![portfolio giris](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/portfolio%20giris.png)
+![FrmBanks](https://github.com/DemirbasAlperen/CSharpEgitimKampiFinancialCrm/blob/master/FrmBanks.png)
+![FrmBanks](https://github.com/DemirbasAlperen/CSharpEgitimKampiFinancialCrm/blob/master/FrmBanks.png)
 ![FrmBanks](https://github.com/DemirbasAlperen/CSharpEgitimKampiFinancialCrm/blob/master/FrmBanks.png)
 
 
