@@ -1,4 +1,4 @@
-# :boom: C# Eğitim Kampı (YouTube)
+# :boom: Asp.Net Core ile Portfolio Uygulamanızı Geliştirin Part 1 & Part 2 (Udemy)
 
 Merhabalar. Bu repomda Murat Yücedağ'ın Udemy üzerinden vermiş olduğu Asp.Net Core ile Portfolio Uygulamanızı Geliştirin Part 1 & Part 2 eğitimlerini tamamlayarak projeyi en kullanılabilir hale getirmeye çalıştım. Aşağıya projede yapılan işlemler ve resimler eklenmiştir :blush: 
 
