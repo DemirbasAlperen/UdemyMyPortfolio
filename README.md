@@ -23,15 +23,17 @@ Merhabalar. Bu repomda Murat Yücedağ'ın Udemy üzerinden vermiş olduğu Asp.
 
 ![portfolio hakkımda](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/portfolio%20hakk%C4%B1mda.png)
 
+![portfolio deneyim](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/portfolio%20deneyim.png)
+
 ![portfolio proje](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/portfolio%20proje.png)
 
 ![portfolio görüsler](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/portfolio%20g%C3%B6r%C3%BCsler.png)
 
-![FrmBanks](https://github.com/DemirbasAlperen/CSharpEgitimKampiFinancialCrm/blob/master/FrmBanks.png)
+![login](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/login.png)
 
-![FrmBanks](https://github.com/DemirbasAlperen/CSharpEgitimKampiFinancialCrm/blob/master/FrmBanks.png)
+![admin dashboard](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/admin%20dashboard.png)
 
-![FrmBanks](https://github.com/DemirbasAlperen/CSharpEgitimKampiFinancialCrm/blob/master/FrmBanks.png)
+![admin yetenek](https://github.com/DemirbasAlperen/UdemyMyPortfolio/blob/master/admin%20yetenek.png)
 
 
 
